@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page - EERE Small Business Program</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333; /* Lighter shade of black */
+      }
+      a {
+        color: #333; /* Lighter shade of black */
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #0056b3; /* Darker shade of blue */
+      }
+      .navbar {
+        background-color: white;
+      }
+      .navbar-brand img {
+        width: 100px;
+        margin-right: 2rem;
+      }
+      .hero-section {
+        background-image: url("https://www.energy.gov/sites/default/files/2019/09/f67/geothermal%20engineer_flopped.jpg");
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        position: relative; /* Add position relative */
+      }
+      .hero-content {
+        color: rgba(50, 50, 50, 0.9); /* Adjust color and opacity */
+        font-weight: bold; /* Make text bold */
+        /* Other styles remain unchanged */
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.1
+        ); /* Adjust opacity here (0.5 means 50% opacity) */
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .form-container,
+      .info-container {
+        width: calc(65% - 20px);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 20px;
+        background: #f9f9f9;
+      }
+      .info-container {
+        width: calc(37% - 20px); /* Increased width by 5% */
+        background: #ffffff;
+      }
+      .form-container form {
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .form-container h2,
+      .info-container h2 {
+        margin-bottom: 20px;
+      }
+      .form-container label,
+      .info-container p {
+        color: #333;
+      }
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container input[type="tel"],
+      .form-container input[type="number"],
+      .form-container select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-container input[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .form-container input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .info-container img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        margin-top: 4rem;
+        background-color: #333; /* Nice shade of black */
+        color: #fff; /* White text */
+        padding: 20px;
+        text-align: center;
+      }
+      .footer img {
+        width: 100px; /* Adjust image size as needed */
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        .form-container,
+        .info-container {
+          width: 100%;
+          margin: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="https://www.energy.gov/eere/eere-small-business-program"
+        >
+          <img
+            src="https://securesustain.org/wp-content/uploads/2018/02/DOE_Logo_Color.png"
+            alt="Logo"
+          />
+          EERE Small Business Program
+        </a>
+        <div class="navbar-text ml-auto">
+          <a
+            href="https://www.energy.gov/eere/about-office-energy-efficiency-and-renewable-energy"
+            >ABOUT EERE</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>EERE Small Business Program</h1>
+        <p>Explore renewable energy opportunities</p>
+      </div>
+    </section>
+
+    <!-- Split Layout: Form Section and Info Section -->
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2>Registration Form</h2>
+        <form
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dak000005RCjt"
+          method="POST"
+        >
+          <input type="hidden" name="oid" value="00Dak000005RCjt" />
+          <input
+            type="hidden"
+            name="retURL"
+            value="https://www.energy.gov/eere/eere-small-business-program"
+          />
+
+          <!-- New Fields -->
+          <label for="Small_Business_Type_of_Work__c">Type of Work</label>
+          <select
+            id="Small_Business_Type_of_Work__c"
+            name="Small_Business_Type_of_Work__c"
+            required
+          >
+            <option value="">Select Type of Work</option>
+            <option value="Consulting and Advisory">
+              Consulting and Advisory
+            </option>
+            <option value="Energy Efficiency">Energy Efficiency</option>
+            <option value="Energy Production">Energy Production</option>
+            <option value="Engineering and Construction">
+              Engineering and Construction
+            </option>
+            <option value="Environmental Services">
+              Environmental Services
+            </option>
+            <option value="Manufacturing and Production">
+              Manufacturing and Production
+            </option>
+            <option value="Renewable Energy">Renewable Energy</option>
+            <option value="Research and Development">
+              Research and Development
+            </option></select
+          ><br />
+
+          <!-- Existing Fields -->
+          <label for="first_name">First Name</label>
+          <input
+            id="first_name"
+            name="first_name"
+            maxlength="40"
+            size="20"
+            type="text"
+            required
+          /><br />
+
+          <label for="last_name">Last Name</label>
+          <input
+            id="last_name"
+            name="last_name"
+            maxlength="80"
+            size="20"
+            type="text"
+            required
+          /><br />
+
+          Number of Employees Standard:<input
+            id="00Nak000002GvIw"
+            name="00Nak000002GvIw"
+            size="20"
+            type="number"
+          /><br />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            maxlength="80"
+            size="20"
+            type="email"
+            required
+          /><br />
+
+          <label for="company">Company</label>
+          <input
+            id="company"
+            name="company"
+            maxlength="40"
+            size="20"
+            type="text"
+            required
+          /><br />
+
+          <label for="00Nak000002GjOe">Business Location (State)</label>
+          <select
+            id="00Nak000002GjOe"
+            name="00Nak000002GjOe"
+            title="Business Location (State)"
+            required
+          >
+            <option value="">--None--</option>
+            <option value="Alabama">Alabama</option>
+            <!-- Include all other options for states --></select
+          ><br />
+
+          <label for="00Nak000002GgBq">Annual Revenue Range</label>
+          <select
+            id="00Nak000002GgBq"
+            name="00Nak000002GgBq"
+            title="Annual Revenue Range"
+            required
+          >
+            <option value="">--None--</option>
+            <option value="Less than $100,000">Less than $100,000</option>
+            <option value="$100,000 - $500,000">$100,000 - $500,000</option>
+            <option value="$500,001 - $1,000,000">$500,001 - $1,000,000</option>
+            <option value="$1,000,001 - $5,000,000">
+              $1,000,001 - $5,000,000
+            </option>
+            <option value="$5,000,001 - $7,500,000">
+              $5,000,001 - $7,500,000
+            </option>
+            <option value="Greater than $7,500,000">
+              Greater than $7,500,000
+            </option></select
+          ><br />
+
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            maxlength="40"
+            size="20"
+            type="tel"
+            required
+          /><br />
+
+          <!-- Submit Button -->
+          <input type="submit" name="submit" value="Submit" />
+        </form>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-container">
+        <h2>Program Information</h2>
+        <p>
+          The Office of Energy Efficiency and Renewable Energy’s (EERE) Small
+          Business Program is designed to help small businesses in the energy
+          industry grow and contribute to the government’s overall energy
+          efficiency goals.
+        </p>
+        <img
+          src="https://ca-times.brightspotcdn.com/dims4/default/7a2e9fb/2147483647/strip/true/crop/8192x5462+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8e%2F1e%2Fa6b3ead64b329cec6a40fe6c5351%2F1356785-me-1018-daggett-solar-farm-025-ik.jpg"
+          alt="Renewable Energy Image"
+        />
+        <p>
+          For more information about the program, visit<br />
+          <a href="https://www.energy.gov/eere/eere-small-business-program"
+            >EERE Small Business Program</a
+          >
+        </p>
+        <br />
+        <img
+          src="https://www.inventiva.co.in/wp-content/uploads/2021/08/renewable-energy-montage-705444748-Shutterstock_FotoIdee.jpg"
+          alt="Renewable Energy Montage"
+        />
+        <p>
+          To learn how to apply for EERE funding, visit<br />
+          <a
+            href="https://www.energy.gov/eere/funding/how-do-i-apply-eere-funding"
+            >How Do I Apply for EERE Funding?</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <img
+        src="https://www.energy.gov/themes/particle/dist/app-drupal/assets/energy_white.png"
+        alt="Energy Logo"
+      />
+      <p>
+        Office of Energy Efficiency & Renewable Energy<br />
+        Forrestal Building<br />
+        1000 Independence Avenue, SW<br />
+        Washington, DC 20585
+      </p>
+    </footer>
+  </body>
+</html>
