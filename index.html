@@ -137,6 +137,11 @@
         }
       }
     </style>
+    <script>
+      window.onload = function () {
+        document.getElementById("registration-form").reset();
+      };
+    </script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -215,6 +220,16 @@
             type="email"
             required
           /><br />
+
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            maxlength="40"
+            size="20"
+            type="tel"
+            required
+          /><br />
           <!-- New Fields -->
           <label for="Small_Business_Type_of_Work__c">Type of Work</label>
           <select
@@ -256,13 +271,6 @@
             type="number"
             min="0"
           /><br />
-          Products/Services:<textarea
-            id="00Nak000002H0Qg"
-            name="00Nak000002H0Qg"
-            type="text"
-            wrap="soft"
-          ></textarea
-          ><br />
 
           <label for="00Nak000002GjOe">Business Location (State)</label>
           <select
@@ -345,18 +353,15 @@
               Greater than $7,500,000
             </option></select
           ><br />
+          Products/Services:<textarea
+            id="00Nak000002H0Qg"
+            name="00Nak000002H0Qg"
+            type="text"
+            wrap="soft"
+          ></textarea
+          ><br />
           <label for="description">Description</label
           ><textarea name="description"></textarea><br />
-
-          <label for="phone">Phone</label>
-          <input
-            id="phone"
-            name="phone"
-            maxlength="40"
-            size="20"
-            type="tel"
-            required
-          /><br />
 
           <!-- Submit Button -->
           <input type="submit" name="submit" value="Submit" />
