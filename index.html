@@ -93,7 +93,8 @@
       .form-container input[type="email"],
       .form-container input[type="tel"],
       .form-container input[type="number"],
-      .form-container select {
+      .form-container select,
+      .form-container textarea {
         width: calc(100% - 22px);
         padding: 10px;
         margin-bottom: 10px;
@@ -137,11 +138,6 @@
         }
       }
     </style>
-    <script>
-      window.onload = function () {
-        document.getElementById("registration-form").reset();
-      };
-    </script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -353,15 +349,16 @@
               Greater than $7,500,000
             </option></select
           ><br />
-          Products/Services:<textarea
+          <label for="00Nak000002H0Qg">Products/Services</label>
+          <textarea
             id="00Nak000002H0Qg"
             name="00Nak000002H0Qg"
-            type="text"
             wrap="soft"
           ></textarea
           ><br />
-          <label for="description">Description</label
-          ><textarea name="description"></textarea><br />
+
+          <label for="description">Description</label>
+          <textarea id="description" name="description"></textarea><br />
 
           <!-- Submit Button -->
           <input type="submit" name="submit" value="Submit" />
